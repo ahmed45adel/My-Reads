@@ -27,6 +27,7 @@ const BooksApp = () => {
     }
     setBooks(updatedBooks);
     BooksAPI.update(book, whereTo);
+
   }
 
 
@@ -105,6 +106,7 @@ const BooksApp = () => {
                   {mergedBooks.map((b) =>
                   (<li key={b.id}>
                     <Book book={b} changeBookShelf={updateBookShelf} />
+                    {console.log(b)}
                   </li>)
                   )}
                 </ol>
